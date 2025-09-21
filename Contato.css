@@ -1,0 +1,102 @@
+body {
+  background-color: greenyellow;
+  font-family: Arial, sans-serif;
+  /*O Padding Cria um espaço interno entre o conteúdo de um elemento (como um texto ou imagem) e a sua borda. */
+  padding: 40px;
+  margin: 0;
+  padding-top: 20px; /* ou o valor da altura do seu menu */
+}
+.git{
+  position: absolute;  
+  margin-top: 30px;  
+}
+h1{
+  text-align: center;
+}
+#redes {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+#redes a {
+  background-color: rgb(47, 118, 47);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#redes a:hover {
+  background-color: rgb(188, 225, 204);
+  transform: scale(1.05);
+}
+
+/* Estilo do menu */
+#menu {
+ background-color:mediumseagreen;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(60, 179, 113, 0.3); 
+  border-radius: 12px;    /*Borda arredondada*/
+  padding: 15px 30px;  /*É o espaço entre o texto e a borda da caixa, sem padding o texto fica colado na borda.*/
+  margin: 20px auto;
+  width: fit-content;  /*Faz com que a largura do menu se ajuste automaticamente ao tamanho dos botões ou links que estão dentro dele — ou seja, ele abraça o conteúdo sem ocupar a tela toda.*/
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2); /*sombra ao redor do menu na cor preta*/
+}
+
+/* Estilo dos links */
+#menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+/* Efeito ao passar o mouse */
+#menu a:hover {
+  background-color:darkseagreen;
+}
+
+/* Espaço para o conteúdo não ficar escondido atrás do menu fixo */
+
+/* Estilo do menu com efeito vidro fosco */
+
+/* Lista horizontal */
+#menu ul {
+  list-style: none; /*Remove os marcadores padrão de listas — como bolinhas.*/
+  display: flex; /*Sem display flex, os itens ficam um embaixo do outro, como se fosse uma lista*/
+  gap: 20px;/*[Início]   ←20px→   [projetos]   ←20px→   [contato]*/
+  margin: 0;
+  padding: 0;
+}
+
+/* Links do menu */
+nav#menu ul li a {
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+.botao {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgb(22, 172, 89);
+  color: #fff;
+  font-weight: bold;
+  font-family: 'Segoe UI', sans-serif;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}

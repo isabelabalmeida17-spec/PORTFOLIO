@@ -1,0 +1,333 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*Criei o root para adicionar apelidos para cores e estilos que vai usar no site.*/
+:root {
+    --cor-principal: #2c3e50;
+    --cor-secundaria: #3498db;
+    --background-color: #f4f7f6;
+    --text-color: #5c6a7a;
+    --card-bg: #ffffff;
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+}
+
+/* --- Componentes de Layout --- */
+.conteudo {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.section-habilidades {
+    max-width: 800px;
+    margin: 0 auto;
+}
+/* --- Header e Navegação --- */
+.header {
+    background-color: var(--card-bg);
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+}
+
+.nav-link {
+    color: var(--cor-principal);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--cor-secundaria);
+}
+
+/* --- Seção de Apresentação (Home) --- */
+.inicio {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 80px;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.intro {
+    text-align: left;
+    flex: 1;
+    min-width: 300px;
+}
+
+.intro h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--cor-principal);
+}
+
+.intro h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cor-secundaria);
+}
+
+.intro p {
+    font-size: 1.1rem;
+    margin: 15px 0;
+}
+
+.profile-image {
+    flex-shrink: 0;
+}
+
+.profile-pic {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--cor-secundaria);
+    box-shadow: var(--shadow);
+    transition: transform 0.3s;
+}
+
+.profile-pic:hover {
+    transform: scale(1.05);
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--cor-secundaria);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+.social-links {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.social-links a {
+    color: var(--cor-principal);
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--cor-secundaria);
+}
+
+/* --- Seção Sobre Mim --- */
+#sobre-mim h2 {
+    margin-bottom: 20px;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.projeto img {
+    border: 2px solid #ccc; /* Adiciona uma borda suave para o formulário */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+}
+
+/*
+* Vamos ajustar o estilo do próprio card do projeto
+*/
+.projeto {
+    background-color: #ffffff; /* Fundo branco para a caixa de projeto */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    text-align: center; /* Centraliza o conteúdo */
+}
+.projeto h2 {
+    font-size: 2.5rem; /* Ajuste o valor para o tamanho que preferir */
+    margin-bottom: 30px; 
+}
+.skill-item {
+    background-color: var(--card-bg);
+    color: var(--primary-color);
+    padding: 15px 30px;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-weight: 600;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.skill-item:hover {
+    /* Opção 1: Crescer um pouco */
+    transform: scale(1.05);
+
+    /* Opção 2: Subir um pouco (remova a Opção 1 para usar esta) */
+    /* transform: translateY(-5px); */
+
+    /* Aumenta a sombra para dar mais destaque */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Seção de Projetos --- */
+.projeto {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s;
+}
+
+.projeto:hover {
+    transform: translateY(-10px);
+}
+
+/* --- Seção de Contato --- */
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+
+.contact-links a {
+    color: var(--cor-principal);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.contact-links a:hover {
+    color: var(--cor-secundaria);
+}
+
+/* --- Rodapé --- */
+.footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    background-color: var(--card-bg);
+    border-top: 1px solid #e0e0e0;
+}
+
+/* --- Media Queries (Responsividade) --- */
+@media (max-width: 768px) {
+    .inicio {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .intro {
+        text-align: center;
+    }
+}
+/*100% da altura da tela*/
+#sobre-mim, #projetos{
+  padding-top:30vh;
+}
+#contato{
+  padding-top: 40vh;
+  padding: 80px 20px;
+}
+
+#contato h2 {
+    /* Adiciona um espaçamento abaixo do título da seção */
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+.section-title {
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: var(--primary-color);
+    text-align: center;
+}
+.contact-links a {
+    /* Estilo dos links */
+    background-color: var(--card-bg); /* Fundo branco ou claro */
+    color: var(--primary-color); /* Cor do texto/ícone */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 15px 30px;
+    border-radius: 50px; /* Bordas arredondadas para um visual de "pílula" */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    
+    /* Centraliza o texto e o ícone dentro do link */
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaço entre o ícone e o texto */
+}
+
+/* SETA PARA VOLTAR AO INÍCIO */
+#seta-inicial {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    
+    /* Estilização visual da seta*/
+    background-color: #3fdd39;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    text-decoration: none;
+    transition: opacity 0.3s, visibility 0.3s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+#seta-inicial:hover {
+    background-color: #2980b9;
+}
